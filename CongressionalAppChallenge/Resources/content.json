@@ -1,0 +1,1143 @@
+{
+  "units": [
+    {
+      "id": "bills",
+      "title": "How a Bill Becomes Law",
+      "icon": "doc.text.fill",
+      "color": "blue",
+      "blurb": "Follow an idea from a student's notebook all the way to the President's desk.",
+      "lessons": [
+        {
+          "id": "bills-1",
+          "title": "From Idea to Bill",
+          "minutes": 3,
+          "cards": [
+            {
+              "heading": "Anyone can have the idea",
+              "body": "Laws start as ideas, and those ideas can come from anyone: a student, a business owner, a group of neighbors, or a member of Congress. Citizens can't introduce bills themselves, but they can ask their representatives to."
+            },
+            {
+              "heading": "Only Congress introduces bills",
+              "body": "Only a Member of Congress can formally introduce a bill. In the House it gets the label H.R. and a number. In the Senate it is S. and a number. The Member who introduces it is the sponsor."
+            },
+            {
+              "heading": "Committees do the heavy lifting",
+              "body": "After introduction, a bill is sent to a committee that focuses on that subject, like Education or Agriculture. Committees hold hearings, hear from experts, and 'mark up' (edit) the text. Most bills never make it out of committee, and that is where the majority of bills quietly end."
+            },
+            {
+              "heading": "Why committees exist",
+              "body": "Thousands of bills are introduced every Congress. Committees let small groups of Members become experts on a topic so the full chamber doesn't have to study every single bill in detail."
+            }
+          ],
+          "quiz": [
+            {
+              "prompt": "Who can formally introduce a bill in Congress?",
+              "choices": [
+                "Any citizen",
+                "Only a Member of Congress",
+                "Only the President",
+                "Only the Supreme Court"
+              ],
+              "answer": 1,
+              "explanation": "Only Members of Congress can introduce bills. Citizens can ask their representatives to sponsor one."
+            },
+            {
+              "prompt": "What does 'H.R.' in front of a bill number mean?",
+              "choices": [
+                "The bill started in the House of Representatives",
+                "The bill is a Highest Ranking bill",
+                "The bill was written by the Human Resources committee",
+                "The bill is a hearing request"
+              ],
+              "answer": 0,
+              "explanation": "H.R. bills are introduced in the House of Representatives. Senate bills start with S."
+            },
+            {
+              "prompt": "What happens to most bills after they are sent to committee?",
+              "choices": [
+                "They become law within a week",
+                "They are signed by the President",
+                "They never advance out of committee",
+                "They go straight to the Supreme Court"
+              ],
+              "answer": 2,
+              "explanation": "The large majority of introduced bills never make it out of committee."
+            }
+          ],
+          "sources": [
+            {
+              "title": "House.gov: The Legislative Process",
+              "url": "https://www.house.gov/the-house-explained/the-legislative-process"
+            },
+            {
+              "title": "USA.gov: How Laws Are Made",
+              "url": "https://www.usa.gov/how-laws-are-made"
+            }
+          ],
+          "action": null
+        },
+        {
+          "id": "bills-2",
+          "title": "Passing Both Chambers",
+          "minutes": 3,
+          "cards": [
+            {
+              "heading": "The floor vote",
+              "body": "If a committee approves a bill, it goes to the full chamber for debate and a vote. In each chamber a simple majority is needed to pass it."
+            },
+            {
+              "heading": "Two chambers, one text",
+              "body": "The House and Senate must pass the exact same version of a bill. If their versions differ, the chambers negotiate to combine them, and both then vote on the final text."
+            },
+            {
+              "heading": "The President's choice",
+              "body": "Once a bill passes both chambers it goes to the President. The President can sign it into law or veto it (send it back with objections)."
+            },
+            {
+              "heading": "Overriding a veto",
+              "body": "Congress can override a veto if two-thirds of the House AND two-thirds of the Senate vote to do so. Overrides are rare because that is a very high bar."
+            }
+          ],
+          "quiz": [
+            {
+              "prompt": "How many chambers of Congress must pass the same bill text?",
+              "choices": [
+                "One",
+                "Two",
+                "Three",
+                "It depends on the bill"
+              ],
+              "answer": 1,
+              "explanation": "Both the House and the Senate must pass identical text before a bill goes to the President."
+            },
+            {
+              "prompt": "What can the President do with a bill that passes Congress?",
+              "choices": [
+                "Only sign it",
+                "Sign it or veto it",
+                "Rewrite it",
+                "Send it to voters"
+              ],
+              "answer": 1,
+              "explanation": "The President can sign the bill or veto it."
+            },
+            {
+              "prompt": "What is needed to override a veto?",
+              "choices": [
+                "A simple majority of the House",
+                "Approval of the Supreme Court",
+                "Two-thirds of both the House and the Senate",
+                "A vote of the state governors"
+              ],
+              "answer": 2,
+              "explanation": "A veto override requires a two-thirds vote in both chambers."
+            }
+          ],
+          "sources": [
+            {
+              "title": "USA.gov: How Laws Are Made",
+              "url": "https://www.usa.gov/how-laws-are-made"
+            },
+            {
+              "title": "Senate.gov: Vetoes",
+              "url": "https://www.senate.gov/legislative/vetoes/vetoes.htm"
+            }
+          ],
+          "action": {
+            "kind": "contactRep",
+            "title": "Ask a representative about a bill",
+            "detail": "Pick an issue you care about and tell your Member of Congress. Real constituent messages get counted."
+          }
+        }
+      ]
+    },
+    {
+      "id": "branches",
+      "title": "Three Branches",
+      "icon": "building.columns.fill",
+      "color": "purple",
+      "blurb": "Why power is split three ways, and how each branch keeps the others honest.",
+      "lessons": [
+        {
+          "id": "branches-1",
+          "title": "Who Does What?",
+          "minutes": 3,
+          "cards": [
+            {
+              "heading": "Legislative: makes the laws",
+              "body": "Article I of the Constitution creates Congress: the House of Representatives and the Senate. Congress writes laws, sets the federal budget, and can declare war."
+            },
+            {
+              "heading": "Executive: carries out the laws",
+              "body": "Article II creates the presidency. The President leads the executive branch, which includes the Vice President, the Cabinet, and federal agencies that carry out the laws."
+            },
+            {
+              "heading": "Judicial: interprets the laws",
+              "body": "Article III creates the Supreme Court and lets Congress create lower federal courts. Judges decide cases and what the law and the Constitution mean."
+            },
+            {
+              "heading": "Why split power?",
+              "body": "The Founders had lived under a king and worried about too much power in one place. Dividing government into three branches makes it harder for any one person or group to control everything."
+            }
+          ],
+          "quiz": [
+            {
+              "prompt": "Which branch writes federal laws?",
+              "choices": [
+                "Executive",
+                "Legislative",
+                "Judicial",
+                "Administrative"
+              ],
+              "answer": 1,
+              "explanation": "Congress, the legislative branch, writes federal laws."
+            },
+            {
+              "prompt": "The Supreme Court belongs to which branch?",
+              "choices": [
+                "Legislative",
+                "Executive",
+                "Judicial",
+                "Federal Reserve"
+              ],
+              "answer": 2,
+              "explanation": "The Supreme Court is the head of the judicial branch, created by Article III."
+            },
+            {
+              "prompt": "Why did the Founders divide power among three branches?",
+              "choices": [
+                "To make government faster",
+                "To prevent any one person or group from having too much power",
+                "To save money",
+                "To let states run everything"
+              ],
+              "answer": 1,
+              "explanation": "Separation of powers was designed to prevent concentration of power."
+            }
+          ],
+          "sources": [
+            {
+              "title": "USA.gov: Branches of the U.S. Government",
+              "url": "https://www.usa.gov/branches-of-government"
+            },
+            {
+              "title": "National Archives: The Constitution",
+              "url": "https://www.archives.gov/founding-docs/constitution-transcript"
+            }
+          ],
+          "action": null
+        },
+        {
+          "id": "branches-2",
+          "title": "Checks and Balances",
+          "minutes": 3,
+          "cards": [
+            {
+              "heading": "Each branch can check the others",
+              "body": "Separate powers are not enough on their own, so each branch also has tools to limit the others. This system is called checks and balances."
+            },
+            {
+              "heading": "Examples in action",
+              "body": "The President can veto laws passed by Congress. Congress can override a veto, approve or reject Cabinet and judicial nominees (the Senate), and impeach officials. Courts can rule that a law or action is unconstitutional."
+            },
+            {
+              "heading": "Judicial review",
+              "body": "In the 1803 case Marbury v. Madison, the Supreme Court established judicial review: the power to decide whether laws and government actions violate the Constitution."
+            },
+            {
+              "heading": "Not a perfect machine",
+              "body": "Checks and balances only work when people use them and pay attention. That is one reason an informed public matters."
+            }
+          ],
+          "quiz": [
+            {
+              "prompt": "Which is an example of the executive branch checking Congress?",
+              "choices": [
+                "Impeaching a judge",
+                "Vetoing a bill",
+                "Writing a law",
+                "Confirming nominees"
+              ],
+              "answer": 1,
+              "explanation": "The President's veto is a check on Congress."
+            },
+            {
+              "prompt": "What did Marbury v. Madison (1803) establish?",
+              "choices": [
+                "The power of the Electoral College",
+                "Judicial review",
+                "The line of presidential succession",
+                "The Bill of Rights"
+              ],
+              "answer": 1,
+              "explanation": "The case established the Supreme Court's power of judicial review."
+            },
+            {
+              "prompt": "Which body confirms Supreme Court nominees?",
+              "choices": [
+                "The House",
+                "The Senate",
+                "The Cabinet",
+                "State legislatures"
+              ],
+              "answer": 1,
+              "explanation": "The Senate provides 'advice and consent' on judicial nominees."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Supreme Court: Marbury v. Madison",
+              "url": "https://www.archives.gov/milestone-documents/marbury-v-madison"
+            },
+            {
+              "title": "USA.gov: Branches of the U.S. Government",
+              "url": "https://www.usa.gov/branches-of-government"
+            }
+          ],
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "levels",
+      "title": "Federal, State & Local",
+      "icon": "map.fill",
+      "color": "green",
+      "blurb": "Who really decides what, from the White House to your school board.",
+      "lessons": [
+        {
+          "id": "levels-1",
+          "title": "Who's In Charge of What?",
+          "minutes": 3,
+          "cards": [
+            {
+              "heading": "Federalism",
+              "body": "The U.S. shares power between a national government and state governments. This is called federalism. The 10th Amendment says powers not given to the federal government belong to the states or the people."
+            },
+            {
+              "heading": "Federal focus",
+              "body": "The federal government handles things like national defense, printing currency, regulating trade between states, and immigration and citizenship."
+            },
+            {
+              "heading": "State focus",
+              "body": "States run their own courts and most elections, issue driver's licenses, set many education and health policies, and can have their own criminal laws."
+            },
+            {
+              "heading": "Local focus",
+              "body": "Cities, counties and school districts handle things closest to daily life: local police and fire, public schools, zoning, parks, trash and water, and local roads."
+            },
+            {
+              "heading": "When laws conflict",
+              "body": "The Constitution's Supremacy Clause says federal law wins when it truly conflicts with state law, as long as the federal law is constitutional."
+            }
+          ],
+          "quiz": [
+            {
+              "prompt": "Which level of government usually runs your local public school district?",
+              "choices": [
+                "Federal",
+                "Local (with state oversight)",
+                "The Supreme Court",
+                "The military"
+              ],
+              "answer": 1,
+              "explanation": "Local school districts run schools day to day, with state rules and funding involved."
+            },
+            {
+              "prompt": "Which is mainly a federal responsibility?",
+              "choices": [
+                "Issuing driver's licenses",
+                "Printing U.S. currency",
+                "Picking up trash",
+                "Setting city zoning"
+              ],
+              "answer": 1,
+              "explanation": "Currency is federal. Driver's licenses are state, and trash and zoning are local."
+            },
+            {
+              "prompt": "What does the Supremacy Clause say?",
+              "choices": [
+                "States can ignore federal law",
+                "Federal law wins over conflicting state law",
+                "The President can overrule the courts",
+                "Cities outrank states"
+              ],
+              "answer": 1,
+              "explanation": "Valid federal law takes priority over conflicting state law."
+            }
+          ],
+          "sources": [
+            {
+              "title": "USA.gov: State and Local Governments",
+              "url": "https://www.usa.gov/local-governments"
+            },
+            {
+              "title": "National Archives: The Constitution",
+              "url": "https://www.archives.gov/founding-docs/constitution-transcript"
+            }
+          ],
+          "action": null
+        },
+        {
+          "id": "levels-2",
+          "title": "Local Government Matters",
+          "minutes": 3,
+          "cards": [
+            {
+              "heading": "The government closest to you",
+              "body": "City councils, county boards and school boards decide things you feel every day: school schedules, bike lanes, park hours, library funding, and how your town spends its budget."
+            },
+            {
+              "heading": "Meetings are open",
+              "body": "Most local government meetings are open to the public, and many are streamed online. Agendas are usually posted in advance, so you can see what will be discussed."
+            },
+            {
+              "heading": "Public comment",
+              "body": "Many boards set aside time for public comment, where residents can speak for a few minutes. A short, specific, respectful comment can genuinely influence a decision."
+            },
+            {
+              "heading": "Small numbers, big impact",
+              "body": "Local votes and meetings often involve far fewer people than federal ones, so one informed person showing up can have an outsized effect."
+            }
+          ],
+          "quiz": [
+            {
+              "prompt": "Which of these is decided by local government?",
+              "choices": [
+                "Declaring war",
+                "Park hours and funding",
+                "Printing money",
+                "Federal taxes"
+              ],
+              "answer": 1,
+              "explanation": "Parks are typically a city or county responsibility."
+            },
+            {
+              "prompt": "What is 'public comment'?",
+              "choices": [
+                "A time when residents can address the board",
+                "A newspaper column",
+                "A type of election",
+                "A federal report"
+              ],
+              "answer": 0,
+              "explanation": "Public comment lets residents speak to officials during a meeting."
+            },
+            {
+              "prompt": "Where can you usually find what a city council will discuss?",
+              "choices": [
+                "A posted meeting agenda",
+                "The Supreme Court website",
+                "Only by asking the mayor",
+                "It is always secret"
+              ],
+              "answer": 0,
+              "explanation": "Agendas are normally posted ahead of meetings."
+            }
+          ],
+          "sources": [
+            {
+              "title": "USA.gov: State and Local Governments",
+              "url": "https://www.usa.gov/local-governments"
+            }
+          ],
+          "action": {
+            "kind": "meeting",
+            "title": "Watch or attend a local meeting",
+            "detail": "Look up your city council or school board schedule and watch one meeting (many are streamed). Note one decision they made."
+          }
+        }
+      ]
+    },
+    {
+      "id": "elections",
+      "title": "Elections & Voting",
+      "icon": "checkmark.seal.fill",
+      "color": "orange",
+      "blurb": "Registration, primaries, the Electoral College, and how your vote fits in.",
+      "lessons": [
+        {
+          "id": "elections-1",
+          "title": "Who Votes and How",
+          "minutes": 3,
+          "cards": [
+            {
+              "heading": "The voting age",
+              "body": "The 26th Amendment (ratified in 1971) set the national voting age at 18. Citizens who are 18 or older on Election Day can generally vote if they meet their state's rules."
+            },
+            {
+              "heading": "Registration",
+              "body": "In almost every state you must register before you can vote. Rules and deadlines vary by state, and many states let you check or complete registration online. Many states also let you pre-register before you turn 18."
+            },
+            {
+              "heading": "Primary vs. general",
+              "body": "Primary elections decide who will represent each party on the ballot. The general election is when voters choose between the candidates who advanced."
+            },
+            {
+              "heading": "States run elections",
+              "body": "Elections are run mostly by states and counties, which is why voting deadlines, ID rules, and voting by mail differ depending on where you live."
+            }
+          ],
+          "quiz": [
+            {
+              "prompt": "Which amendment set the voting age at 18?",
+              "choices": [
+                "15th",
+                "19th",
+                "26th",
+                "1st"
+              ],
+              "answer": 2,
+              "explanation": "The 26th Amendment lowered the voting age to 18 in 1971."
+            },
+            {
+              "prompt": "What is a primary election?",
+              "choices": [
+                "The most important general election",
+                "An election to choose party candidates for the ballot",
+                "A vote on amendments only",
+                "An election only for the President"
+              ],
+              "answer": 1,
+              "explanation": "Primaries decide which candidates represent each party in the general election."
+            },
+            {
+              "prompt": "Who mostly runs elections in the U.S.?",
+              "choices": [
+                "Only the federal government",
+                "States and counties",
+                "The Supreme Court",
+                "The Cabinet"
+              ],
+              "answer": 1,
+              "explanation": "States and local election offices run elections, so rules vary by location."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Vote.gov: Register to Vote",
+              "url": "https://vote.gov"
+            },
+            {
+              "title": "National Archives: Amendments 11-27",
+              "url": "https://www.archives.gov/founding-docs/amendments-11-27"
+            }
+          ],
+          "action": {
+            "kind": "register",
+            "title": "Check your voter registration",
+            "detail": "Use vote.gov to find your state's registration rules, check your status, or find out how to pre-register."
+          }
+        },
+        {
+          "id": "elections-2",
+          "title": "The Electoral College",
+          "minutes": 3,
+          "cards": [
+            {
+              "heading": "How presidents are chosen",
+              "body": "Americans don't vote for President directly. Instead, voters in each state choose electors who then cast the electoral votes."
+            },
+            {
+              "heading": "The numbers",
+              "body": "There are 538 electors in total, and a candidate needs 270 to win. Each state's number equals its House seats plus its two Senate seats. Washington, D.C. has 3 electors."
+            },
+            {
+              "heading": "Winner-take-all",
+              "body": "In most states, the candidate who wins the state's popular vote gets all its electoral votes. Maine and Nebraska divide theirs in a different way."
+            },
+            {
+              "heading": "Why it matters",
+              "body": "Because of this system, a candidate can win the presidency without winning the national popular vote, which has happened in a few elections. People disagree about whether the system should change, and understanding how it works helps you join that debate."
+            }
+          ],
+          "quiz": [
+            {
+              "prompt": "How many electoral votes does a candidate need to win the presidency?",
+              "choices": [
+                "218",
+                "270",
+                "435",
+                "538"
+              ],
+              "answer": 1,
+              "explanation": "There are 538 electoral votes, and a majority (270) is needed."
+            },
+            {
+              "prompt": "A state's number of electors equals...",
+              "choices": [
+                "Its population divided by 100",
+                "Its House seats plus 2 Senate seats",
+                "Only its Senate seats",
+                "Always 3"
+              ],
+              "answer": 1,
+              "explanation": "Electors = number of Representatives + 2 Senators."
+            },
+            {
+              "prompt": "In most states, electoral votes are awarded...",
+              "choices": [
+                "Proportionally",
+                "Winner-take-all",
+                "By the governor",
+                "By random draw"
+              ],
+              "answer": 1,
+              "explanation": "Most states use winner-take-all. Maine and Nebraska split theirs."
+            }
+          ],
+          "sources": [
+            {
+              "title": "National Archives: Electoral College",
+              "url": "https://www.archives.gov/electoral-college/about"
+            }
+          ],
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "rights",
+      "title": "Your Rights",
+      "icon": "hand.raised.fill",
+      "color": "red",
+      "blurb": "The Bill of Rights, and what it means for students today.",
+      "lessons": [
+        {
+          "id": "rights-1",
+          "title": "The Bill of Rights",
+          "minutes": 3,
+          "cards": [
+            {
+              "heading": "Ten amendments",
+              "body": "The Bill of Rights is the first ten amendments to the Constitution, ratified in 1791. They protect individual liberties and limit what government can do."
+            },
+            {
+              "heading": "The First Amendment",
+              "body": "It protects five freedoms: religion, speech, press, assembly, and the right to petition the government for a redress of grievances (that means asking it to fix a problem)."
+            },
+            {
+              "heading": "Fair treatment",
+              "body": "The 4th Amendment protects against unreasonable searches and seizures. The 5th and 6th protect due process, the right to a fair trial, and the right to a lawyer in criminal cases."
+            },
+            {
+              "heading": "Rights have limits",
+              "body": "No right is absolute. Courts balance individual rights against other important interests, which is why many famous Supreme Court cases are about where the line is."
+            }
+          ],
+          "quiz": [
+            {
+              "prompt": "How many amendments make up the Bill of Rights?",
+              "choices": [
+                "5",
+                "10",
+                "13",
+                "27"
+              ],
+              "answer": 1,
+              "explanation": "The Bill of Rights is the first ten amendments."
+            },
+            {
+              "prompt": "Which is NOT one of the five First Amendment freedoms?",
+              "choices": [
+                "Religion",
+                "Press",
+                "Right to bear arms",
+                "Petition"
+              ],
+              "answer": 2,
+              "explanation": "The right to bear arms is in the Second Amendment."
+            },
+            {
+              "prompt": "The right to petition the government means...",
+              "choices": [
+                "The right to ask it to address a problem",
+                "The right to write laws",
+                "The right to a trial by jury",
+                "The right to vote in every election"
+              ],
+              "answer": 0,
+              "explanation": "Petitioning is asking the government to address grievances, for example by contacting your representatives."
+            }
+          ],
+          "sources": [
+            {
+              "title": "National Archives: The Bill of Rights",
+              "url": "https://www.archives.gov/founding-docs/bill-of-rights-transcript"
+            }
+          ],
+          "action": null
+        },
+        {
+          "id": "rights-2",
+          "title": "Rights at School",
+          "minutes": 3,
+          "cards": [
+            {
+              "heading": "Students have rights too",
+              "body": "In Tinker v. Des Moines (1969), students wore black armbands to protest the Vietnam War and were suspended. The Supreme Court ruled that students do not 'shed their constitutional rights to freedom of speech or expression at the schoolhouse gate.'"
+            },
+            {
+              "heading": "But schools can set limits",
+              "body": "Schools can restrict speech that substantially disrupts learning or interferes with others' rights. Later cases also gave schools some authority over school-sponsored activities like student newspapers."
+            },
+            {
+              "heading": "Know the rules",
+              "body": "Student handbooks and state laws matter. If you think a rule goes too far, you can raise it respectfully with your school board, which is an example of using your right to petition."
+            },
+            {
+              "heading": "Speaking up, responsibly",
+              "body": "Using your rights responsibly means being informed, respectful, and ready to listen to people who disagree with you."
+            }
+          ],
+          "quiz": [
+            {
+              "prompt": "What did Tinker v. Des Moines (1969) decide?",
+              "choices": [
+                "Students have no free speech rights at school",
+                "Students keep free speech rights at school, within limits",
+                "Schools must allow all speech",
+                "Only teachers have free speech"
+              ],
+              "answer": 1,
+              "explanation": "The Court said students keep their rights, though schools can limit substantially disruptive speech."
+            },
+            {
+              "prompt": "Which of these is an example of petitioning your government?",
+              "choices": [
+                "Ignoring a school rule",
+                "Speaking at a school board meeting",
+                "Skipping class",
+                "Posting a rumor"
+              ],
+              "answer": 1,
+              "explanation": "Speaking at a public meeting is a direct way to petition."
+            },
+            {
+              "prompt": "Can schools ever limit student speech?",
+              "choices": [
+                "Never",
+                "Yes, if it substantially disrupts learning",
+                "Only with a warrant",
+                "Only for teachers"
+              ],
+              "answer": 1,
+              "explanation": "Speech that substantially disrupts school activities can be limited."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Oyez: Tinker v. Des Moines (1969)",
+              "url": "https://www.oyez.org/cases/1968/21"
+            }
+          ],
+          "action": {
+            "kind": "share",
+            "title": "Teach one thing to a friend",
+            "detail": "Pick one fact you learned and explain it to a friend or family member. Teaching is the best way to remember."
+          }
+        }
+      ]
+    },
+    {
+      "id": "informed",
+      "title": "Stay Informed",
+      "icon": "eye.fill",
+      "color": "teal",
+      "blurb": "Being an aware citizen starts with knowing what's true. Learn to check sources like a pro.",
+      "lessons": [
+        {
+          "id": "informed-1",
+          "title": "Reading the News Smartly",
+          "minutes": 3,
+          "cards": [
+            {
+              "heading": "News, opinion, and ads",
+              "body": "Not everything that looks like news is news. News reports try to describe what happened. Opinion pieces argue for a point of view. Sponsored content is advertising made to look like an article. Knowing which one you're reading changes how much weight to give it."
+            },
+            {
+              "heading": "Headlines aren't the whole story",
+              "body": "Headlines are short, and they are often written to grab attention. Read past the headline before you decide what you think or share it. A story's details can be very different from what its headline suggests."
+            },
+            {
+              "heading": "Check who's behind it",
+              "body": "Before trusting a claim, ask: Who made this? What do they want? What is their evidence? Can I find the same information from other reliable sources? A quick search about the source itself often tells you a lot."
+            },
+            {
+              "heading": "Lateral reading",
+              "body": "Professional fact-checkers don't stay on one page. They open new tabs to see what other sources say about the site or claim. This is called lateral reading, and studies of fact-checkers suggest it works better than only looking at the page itself."
+            },
+            {
+              "heading": "Slow down when you feel strong emotion",
+              "body": "Posts designed to make you angry or scared spread fastest. If something makes you feel a strong reaction, that's a good moment to pause and check it before you share it."
+            }
+          ],
+          "quiz": [
+            {
+              "prompt": "What is lateral reading?",
+              "choices": [
+                "Reading a page very quickly",
+                "Opening other tabs to check what others say about a source or claim",
+                "Reading only the headline",
+                "Reading from left to right"
+              ],
+              "answer": 1,
+              "explanation": "Lateral reading means leaving the page to see what other sources say about it."
+            },
+            {
+              "prompt": "Which is designed to persuade you toward a point of view?",
+              "choices": [
+                "A news report",
+                "An opinion piece",
+                "A weather forecast",
+                "A public record"
+              ],
+              "answer": 1,
+              "explanation": "Opinion pieces argue for a position, while news reports aim to describe events."
+            },
+            {
+              "prompt": "What is a good habit before sharing a shocking post?",
+              "choices": [
+                "Share it right away",
+                "Pause and check it against other reliable sources",
+                "Only check the number of likes",
+                "Delete your account"
+              ],
+              "answer": 1,
+              "explanation": "Slowing down and verifying stops false information from spreading."
+            }
+          ],
+          "sources": [
+            {
+              "title": "News Literacy Project",
+              "url": "https://newslit.org/"
+            },
+            {
+              "title": "Stanford Digital Inquiry Group: Civic Online Reasoning",
+              "url": "https://cor.inquirygroup.org/"
+            }
+          ],
+          "action": {
+            "kind": "share",
+            "title": "Fact-check one thing",
+            "detail": "Pick a claim you saw online this week. Open new tabs and find two other sources that report it. Tell a friend what you found."
+          }
+        },
+        {
+          "id": "informed-2",
+          "title": "Go to the Source",
+          "minutes": 3,
+          "cards": [
+            {
+              "heading": "Primary sources",
+              "body": "A primary source is the original: the actual text of a bill, a court's written opinion, a transcript, or official data. A secondary source, like a news article, tells you about it. Whenever you can, check the primary source yourself."
+            },
+            {
+              "heading": "Read the bill itself",
+              "body": "Congress.gov is the official site for U.S. legislative information. You can search for a bill, read its text, see who sponsored it, and follow where it is in the process. Bill summaries and news stories can miss details that the text itself contains."
+            },
+            {
+              "heading": "Fact vs. opinion",
+              "body": "A fact can be checked and shown to be true or false, like how a member voted. An opinion is a judgment, like whether that vote was good. Both matter in politics, and the skill is telling them apart."
+            },
+            {
+              "heading": "Look for several perspectives",
+              "body": "On a hard issue, reasonable people often disagree about priorities, not just facts. Reading a few sources with different viewpoints helps you understand the debate, and makes your own opinion stronger."
+            },
+            {
+              "heading": "Being aware means staying curious",
+              "body": "No one can know everything. Awareness is a habit: check where information comes from, keep learning, and be willing to change your mind when the evidence changes."
+            }
+          ],
+          "quiz": [
+            {
+              "prompt": "Which is a primary source about a bill?",
+              "choices": [
+                "A friend's summary",
+                "The bill's official text",
+                "A meme about it",
+                "A headline"
+              ],
+              "answer": 1,
+              "explanation": "The official text is the original, primary source."
+            },
+            {
+              "prompt": "Which statement is a fact that can be checked?",
+              "choices": [
+                "That bill is a terrible idea",
+                "The Senate voted on the bill on a certain date",
+                "Everyone hates this law",
+                "This vote was unfair"
+              ],
+              "answer": 1,
+              "explanation": "Whether a vote happened on a date can be verified. The others are opinions."
+            },
+            {
+              "prompt": "Which official site lets you read bill text and track its status?",
+              "choices": [
+                "Congress.gov",
+                "A random blog",
+                "A shopping site",
+                "A weather app"
+              ],
+              "answer": 0,
+              "explanation": "Congress.gov is the official source for federal legislative information."
+            }
+          ],
+          "sources": [
+            {
+              "title": "Congress.gov",
+              "url": "https://www.congress.gov/"
+            },
+            {
+              "title": "News Literacy Project",
+              "url": "https://newslit.org/"
+            }
+          ],
+          "action": null
+        }
+      ]
+    },
+    {
+      "id": "involved",
+      "title": "Get Involved",
+      "icon": "hands.sparkles.fill",
+      "color": "pink",
+      "blurb": "You don't have to wait until you're 18 to make a difference. Here's how to start.",
+      "lessons": [
+        {
+          "id": "involved-1",
+          "title": "Contact Your Representatives",
+          "minutes": 3,
+          "cards": [
+            {
+              "heading": "They work for you",
+              "body": "Members of Congress represent the people in their state or district. Hearing from constituents helps them understand what people care about. You can contact them even if you can't vote yet."
+            },
+            {
+              "heading": "Ways to reach them",
+              "body": "Most offices accept messages through a contact form on their website, and many take phone calls. Some also take letters. Members hold events like town halls where you can ask questions in person."
+            },
+            {
+              "heading": "Make it count",
+              "body": "Be brief and respectful. Say who you are (a student who lives in their district), name the specific issue or bill, say why it matters to you, and say what you would like them to do. Personal stories are powerful."
+            },
+            {
+              "heading": "Find the right person",
+              "body": "Your Representative in the House serves your district, and you have two Senators for your whole state. The Act tab in this app can find all three from your ZIP code."
+            },
+            {
+              "heading": "Follow up",
+              "body": "A response might be a form letter or a note from a staff member, and that's normal. Keep learning about the issue and stay in touch. Consistent, polite voices are hard to ignore."
+            }
+          ],
+          "quiz": [
+            {
+              "prompt": "Who represents you in the U.S. Senate?",
+              "choices": [
+                "One senator",
+                "Two senators from your state",
+                "Five senators",
+                "It depends on your ZIP code"
+              ],
+              "answer": 1,
+              "explanation": "Every state has two U.S. Senators, so everyone in a state shares the same two."
+            },
+            {
+              "prompt": "Which makes a message to a representative more effective?",
+              "choices": [
+                "Being specific about the issue and what you want",
+                "Being as long as possible",
+                "Using angry language",
+                "Never saying where you live"
+              ],
+              "answer": 0,
+              "explanation": "Clear, respectful, specific messages from constituents work best."
+            },
+            {
+              "prompt": "Can you contact your representative if you're under 18?",
+              "choices": [
+                "No, only voters can",
+                "Yes, anyone can share their views",
+                "Only with a lawyer",
+                "Only in person"
+              ],
+              "answer": 1,
+              "explanation": "You can share your views with your representatives at any age."
+            }
+          ],
+          "sources": [
+            {
+              "title": "USA.gov: Elected Officials",
+              "url": "https://www.usa.gov/elected-officials"
+            },
+            {
+              "title": "Senate.gov: Contact a Senator",
+              "url": "https://www.senate.gov/senators/senators-contact.htm"
+            },
+            {
+              "title": "House.gov: Find Your Representative",
+              "url": "https://www.house.gov/representatives/find-your-representative"
+            }
+          ],
+          "action": {
+            "kind": "contactRep",
+            "title": "Write to a representative",
+            "detail": "Use the Act tab to find your representatives and draft a short, respectful message about an issue you care about."
+          }
+        },
+        {
+          "id": "involved-2",
+          "title": "Ways to Make a Difference",
+          "minutes": 3,
+          "cards": [
+            {
+              "heading": "Civic life is more than voting",
+              "body": "Voting matters, and so does everything in between elections: attending meetings, volunteering, helping others register, and speaking up when you see a problem."
+            },
+            {
+              "heading": "Work at the polls",
+              "body": "Elections rely on poll workers to run voting sites. Rules about who can serve are set by each state, and some states let students work at the polls before they turn 18. Check your state's or county's election office for details."
+            },
+            {
+              "heading": "Get involved locally",
+              "body": "Many towns have youth councils, student advisory boards, and volunteer groups. Attending a city council or school board meeting is a great first step, and many meetings have a time for public comment."
+            },
+            {
+              "heading": "Help others take part",
+              "body": "You can help friends and family check their voter registration, find their polling place, and understand what is on the ballot. Sharing accurate information is a real form of civic service."
+            },
+            {
+              "heading": "Start small, keep going",
+              "body": "Civic action can begin with one email, one meeting, or one conversation. The habit of paying attention and taking part adds up over a lifetime."
+            }
+          ],
+          "quiz": [
+            {
+              "prompt": "Who decides who can be a poll worker?",
+              "choices": [
+                "Each state sets its own rules",
+                "The Supreme Court alone",
+                "Only the President",
+                "No rules exist"
+              ],
+              "answer": 0,
+              "explanation": "Poll worker rules vary by state, and some allow high school students to help."
+            },
+            {
+              "prompt": "Which is a good first step for local involvement?",
+              "choices": [
+                "Ignore local news",
+                "Attend a city council or school board meeting",
+                "Wait until age 30",
+                "Only post online"
+              ],
+              "answer": 1,
+              "explanation": "Local meetings are open to the public and a great way to start."
+            },
+            {
+              "prompt": "Which of these counts as civic action?",
+              "choices": [
+                "Helping a friend check their voter registration",
+                "Ignoring an election",
+                "Sharing a rumor without checking",
+                "Skipping every meeting"
+              ],
+              "answer": 0,
+              "explanation": "Helping others take part in elections is a real civic contribution."
+            }
+          ],
+          "sources": [
+            {
+              "title": "U.S. Election Assistance Commission: Become a Poll Worker",
+              "url": "https://www.eac.gov/voters/become-poll-worker"
+            },
+            {
+              "title": "USA.gov: Elected Officials",
+              "url": "https://www.usa.gov/elected-officials"
+            }
+          ],
+          "action": {
+            "kind": "register",
+            "title": "Help someone else take part",
+            "detail": "Ask a friend or family member if they've checked their voter registration, and share vote.gov with them."
+          }
+        }
+      ]
+    }
+  ],
+  "words": [
+    {
+      "term": "Filibuster",
+      "definition": "A tactic in the Senate where debate is extended to delay or block a vote on a bill."
+    },
+    {
+      "term": "Veto",
+      "definition": "The President's power to reject a bill passed by Congress."
+    },
+    {
+      "term": "Amendment",
+      "definition": "A change or addition to a bill, or to the Constitution."
+    },
+    {
+      "term": "Quorum",
+      "definition": "The minimum number of members that must be present for a body to conduct business."
+    },
+    {
+      "term": "Subpoena",
+      "definition": "A legal order requiring someone to testify or provide documents."
+    },
+    {
+      "term": "Precedent",
+      "definition": "An earlier court decision that guides how similar cases are decided later."
+    },
+    {
+      "term": "Cloture",
+      "definition": "A Senate procedure to end debate and move toward a vote."
+    },
+    {
+      "term": "Gerrymandering",
+      "definition": "Drawing district boundaries to give one group an advantage in elections."
+    },
+    {
+      "term": "Incumbent",
+      "definition": "The person who currently holds an office."
+    },
+    {
+      "term": "Referendum",
+      "definition": "A direct vote by citizens on a specific law or issue."
+    },
+    {
+      "term": "Constituent",
+      "definition": "A person who lives in the area a public official represents."
+    },
+    {
+      "term": "Ratify",
+      "definition": "To formally approve, such as states approving a constitutional amendment."
+    },
+    {
+      "term": "Jurisdiction",
+      "definition": "The authority of a court or government to make decisions in a particular area or case."
+    },
+    {
+      "term": "Bipartisan",
+      "definition": "Involving support from members of both major political parties."
+    },
+    {
+      "term": "Appropriation",
+      "definition": "Money that Congress sets aside for a specific purpose."
+    },
+    {
+      "term": "Lobbyist",
+      "definition": "A person who tries to influence lawmakers on behalf of a group or cause."
+    },
+    {
+      "term": "Impeachment",
+      "definition": "A formal charge of wrongdoing against a public official, brought by the House."
+    },
+    {
+      "term": "Caucus",
+      "definition": "A group of members with shared interests or party affiliation, or a type of meeting used to choose candidates."
+    }
+  ]
+}
