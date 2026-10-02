@@ -44,15 +44,10 @@ for s in m.segments {
 }
 let total = m.pad_start + m.video_out + m.pad_end
 
-// Music bed: loop the 20 s pad until the end
+// Pre-mixed audio (quiet music + sound effects), already total-length with fades baked in
 let bed = AVURLAsset(url: URL(fileURLWithPath: dir + "/bed.wav"))
 let music = comp.addMutableTrack(withMediaType: .audio, preferredTrackID: kCMPersistentTrackID_Invalid)!
-var t = 0.0
-while t < total - 0.01 {
-    let len = min(20.0, total - t)
-    try music.insertTimeRange(CMTimeRange(start: .zero, duration: T(len)), of: bed.tracks(withMediaType: .audio)[0], at: T(t))
-    t += len
-}
+try music.insertTimeRange(CMTimeRange(start: .zero, duration: T(total)), of: bed.tracks(withMediaType: .audio)[0], at: .zero)
 
 // Video composition: scale the footage into the phone "screen" hole
 let pt = srcV.preferredTransform
@@ -119,7 +114,7 @@ vc.animationTool = AVVideoCompositionCoreAnimationTool(postProcessingAsVideoLaye
 // Audio mix: quiet music bed with a fade-out
 let mix = AVMutableAudioMix()
 let mp = AVMutableAudioMixInputParameters(track: music)
-mp.setVolume(0.30, at: .zero); mp.setVolumeRamp(fromStartVolume: 0.30, toEndVolume: 0, timeRange: CMTimeRange(start: T(total - 3), duration: T(3)))
+mp.setVolume(1.0, at: .zero)
 mix.inputParameters = [mp]
 if let at = aTrack { let ap = AVMutableAudioMixInputParameters(track: at); ap.setVolume(1.0, at: .zero); mix.inputParameters.append(ap) }
 

@@ -120,7 +120,7 @@
     },
     {
       "src": [
-        161,
+        160,
         167
       ],
       "cap": "quiz"
@@ -194,6 +194,94 @@
         347
       ],
       "cap": "end"
+    }
+  ],
+  "auto_whoosh": true,
+  "sfx": [
+    {
+      "src": 26.3,
+      "name": "correct",
+      "gain": 0.8
+    },
+    {
+      "src": 30.7,
+      "name": "pop",
+      "gain": 0.6
+    },
+    {
+      "src": 111,
+      "name": "pop",
+      "gain": 0.5
+    },
+    {
+      "src": 114,
+      "name": "pop",
+      "gain": 0.5
+    },
+    {
+      "src": 117,
+      "name": "pop",
+      "gain": 0.5
+    },
+    {
+      "src": 120,
+      "name": "pop",
+      "gain": 0.5
+    },
+    {
+      "src": 140.6,
+      "name": "correct",
+      "gain": 0.8
+    },
+    {
+      "src": 145.5,
+      "name": "correct",
+      "gain": 0.8
+    },
+    {
+      "src": 151.5,
+      "name": "correct",
+      "gain": 0.8
+    },
+    {
+      "src": 160.5,
+      "name": "complete",
+      "gain": 0.7
+    },
+    {
+      "src": 181,
+      "name": "sparkle",
+      "gain": 0.6
+    },
+    {
+      "src": 190.6,
+      "name": "correct",
+      "gain": 0.8
+    },
+    {
+      "src": 212.3,
+      "name": "correct",
+      "gain": 0.8
+    },
+    {
+      "src": 227.6,
+      "name": "correct",
+      "gain": 0.8
+    },
+    {
+      "src": 248.3,
+      "name": "correct",
+      "gain": 0.8
+    },
+    {
+      "src": 311,
+      "name": "sparkle",
+      "gain": 0.7
+    },
+    {
+      "src": 335.2,
+      "name": "pop",
+      "gain": 0.6
     }
   ]
 }

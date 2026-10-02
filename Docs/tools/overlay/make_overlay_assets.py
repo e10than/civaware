@@ -86,17 +86,51 @@ o = tl["outro"]
 ol = [(o["lines"][0], 40, GOLD), (o["lines"][1], 32, WHITE)] + [(t, 24, SOFT) for t in o["lines"][2:]]
 card("outro.png", o["title"], 96, ol)
 
-# 20 s seamless music bed (frequencies are multiples of 0.05 Hz so it loops cleanly)
-sr, dur = 44100, 20
-notes = [130.8, 196.0, 261.6, 329.6, 392.0]
-samples = []
-for i in range(sr * dur):
+# ---- audio: quiet original music + sound effects synced to the footage, mixed into one track ----
+from make_music import music_loop, SR as MSR
+sr = MSR
+total = tl["pad_start"] + video_out + tl["pad_end"]
+n = int(total * sr)
+mix = [0.0] * n
+loop = music_loop()
+MUSIC_GAIN = 0.20
+for i in range(n):
     t = i / sr
-    s = sum(math.sin(2 * math.pi * f * t + 0.3 * math.sin(2 * math.pi * 0.1 * t)) for f in notes) / len(notes)
-    samples.append(0.5 * (0.85 + 0.15 * math.sin(2 * math.pi * 0.1 * t)) * s)
+    fade = min(1.0, t / 1.5, (total - t) / 3.5)
+    mix[i] = MUSIC_GAIN * fade * loop[i % len(loop)]
+
+SOUNDS = os.path.join(HERE, "..", "..", "..", "CongressionalAppChallenge", "Resources", "Sounds")
+def read_wav(name):
+    w = wave.open(os.path.join(SOUNDS, name + ".wav")); raw = w.readframes(w.getnframes())
+    return [v / 32768 for v in struct.unpack("<" + "h" * (len(raw) // 2), raw)]
+def out_time(src_t):
+    c = tl["pad_start"]
+    for sg in tl["segments"]:
+        rate = sg.get("rate", 1.0); a0, a1 = sg["src"]
+        if a0 <= src_t <= a1: return c + (src_t - a0) / rate
+        c += (a1 - a0) / rate
+    return None
+cache = {}
+def sfx(name, at, gain):
+    if at is None: return
+    if name not in cache: cache[name] = read_wav(name)
+    st = int(at * sr)
+    for j, v in enumerate(cache[name]):
+        if st + j < n: mix[st + j] += v * gain * 0.55
+events = [("sparkle", 0.3, 0.8), ("complete", total - tl["pad_end"] + 0.4, 0.9)]
+if tl.get("auto_whoosh"):
+    c = tl["pad_start"]
+    for k, sg in enumerate(tl["segments"]):
+        if k: events.append(("whoosh", c, 0.5))
+        c += (sg["src"][1] - sg["src"][0]) / sg.get("rate", 1.0)
+for e in tl.get("sfx", []):
+    events.append((e["name"], out_time(e["src"]), e.get("gain", 0.8)))
+for name, at, gain in events: sfx(name, at, gain)
+peak = max(abs(v) for v in mix) or 1; scale = min(1.0, 0.92 / peak)
 with wave.open(os.path.join(OUT, "bed.wav"), "wb") as w:
     w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr)
-    w.writeframes(b"".join(struct.pack("<h", int(v * 32767)) for v in samples))
+    w.writeframes(b"".join(struct.pack("<h", int(max(-1, min(1, v * scale)) * 32767)) for v in mix))
+print("audio: music loop", round(len(loop) / sr, 1), "s,", len(events), "sound effects")
 
 json.dump(dict(width=W, height=H, hole=hole, pad_start=tl["pad_start"], pad_end=tl["pad_end"], layers=layers,
                segments=segs, video_out=video_out, video_size=[vw, vh]),
