@@ -6,3 +6,4 @@ build/
 .build/
 *.xcodeproj/project.xcworkspace/xcuserdata/
 Docs/StudentTest/*_REAL*.csv
+Docs/CivAware_demo.mp4
