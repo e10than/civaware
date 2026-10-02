@@ -1,0 +1,104 @@
+#!/usr/bin/env python3
+"""Builds the branded frame, caption images and music bed for the screen-recording overlay.
+usage: make_overlay_assets.py <screen_recording.mov> [timeline.json]
+Writes /tmp/civaware_overlay/manifest.json for compose_overlay.swift.
+"""
+import json, math, os, struct, subprocess, sys, wave
+from PIL import Image, ImageDraw, ImageFilter
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(HERE, ".."))
+from make_demo_video import make_background, text_block, font, with_alpha, WHITE, GOLD, SOFT, W, H  # noqa
+
+OUT = "/tmp/civaware_overlay"
+os.makedirs(OUT, exist_ok=True)
+video = sys.argv[1]
+tl = json.load(open(sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "timeline.json")))
+
+def dims(path):
+    probe = "/tmp/probe_video"
+    if not os.path.exists(probe):
+        subprocess.run(["swiftc", "-O", os.path.join(HERE, "probe_video.swift"), "-o", probe], check=True)
+    out = subprocess.run([probe, path], capture_output=True, text=True).stdout.split()[0]
+    w, h = out.split("x")
+    return int(w), int(h)
+
+vw, vh = dims(video)
+if vw > vh: sys.exit("This tool expects a portrait (phone) recording.")
+screen_h = 610
+screen_w = round(vw * screen_h / vh)
+bezel, rad = 12, 46
+pw, ph = screen_w + 2 * bezel, screen_h + 2 * bezel
+px = 790 + (260 - pw) // 2                      # phone body left
+py = (H - ph) // 2
+hole = (px + bezel, py + bezel, screen_w, screen_h)   # x, y(top), w, h
+
+# frame.png: background + phone body, with a transparent rounded "screen" hole
+bg = make_background().convert("RGBA")
+shadow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+ImageDraw.Draw(shadow).rounded_rectangle([px - 4, py + 12, px + pw + 4, py + ph + 24], rad + 10, fill=(0, 0, 0, 120))
+bg = Image.alpha_composite(bg, shadow.filter(ImageFilter.GaussianBlur(18)))
+ImageDraw.Draw(bg).rounded_rectangle([px, py, px + pw, py + ph], rad + bezel, fill=(12, 16, 34, 255))
+holemask = Image.new("L", (W, H), 255)
+ImageDraw.Draw(holemask).rounded_rectangle([hole[0], hole[1], hole[0] + hole[2], hole[1] + hole[3]], rad, fill=0)
+frame = bg.copy(); frame.putalpha(holemask)
+frame.save(os.path.join(OUT, "frame.png"))
+
+layers = []
+def add_text(title, size, lines, start, end):
+    max_w, gap = 560, 14
+    elems = [text_block(title, size, WHITE, max_w)] + [text_block(t, 30, SOFT, max_w) for t in lines]
+    heights = [e.height + (gap if i else 0) + (22 if i == 1 else 0) for i, e in enumerate(elems)]
+    y = (H - sum(heights)) // 2
+    for i, e in enumerate(elems):
+        y += (gap if i else 0) + (22 if i == 1 else 0)
+        name = f"cap_{len(layers)}.png"
+        e.save(os.path.join(OUT, name))
+        layers.append(dict(png=name, x=70, y=y, w=e.width, h=e.height, start=start + 0.3 * i, end=end, fade=0.5))
+        y += e.height
+
+# Walk the segments to get output times, then give each caption id a window across its segments.
+segs, cursor, windows = [], 0.0, {}
+for sg in tl["segments"]:
+    rate = sg.get("rate", 1.0)
+    dur = (sg["src"][1] - sg["src"][0]) / rate
+    segs.append(dict(start=sg["src"][0], end=sg["src"][1], rate=rate))
+    w = windows.setdefault(sg["cap"], [cursor, cursor + dur])
+    w[1] = cursor + dur
+    cursor += dur
+video_out = cursor
+for cid, (a0, a1) in windows.items():
+    c = tl["captions"][cid]
+    add_text(c["title"], 46, c["lines"], tl["pad_start"] + a0 + 0.3, tl["pad_start"] + a1 - 0.2)
+
+# intro / outro full-frame cards
+def card(name, title, tsize, lines):
+    img = make_background().convert("RGBA")
+    blocks = [(text_block(title, tsize, WHITE, 1000), 0)] + [(text_block(t, s, col, 1000), 16) for (t, s, col) in lines]
+    total = sum(b.height + g for b, g in blocks)
+    y = (H - total) // 2
+    for b, g in blocks:
+        y += g
+        tw = b.getbbox()[2] if b.getbbox() else b.width
+        img.alpha_composite(b, ((W - tw) // 2, y)); y += b.height
+    img.save(os.path.join(OUT, name))
+card("intro.png", tl["intro"]["title"], 120, [(tl["intro"]["subtitle"], 48, GOLD)])
+o = tl["outro"]
+ol = [(o["lines"][0], 40, GOLD), (o["lines"][1], 32, WHITE)] + [(t, 24, SOFT) for t in o["lines"][2:]]
+card("outro.png", o["title"], 96, ol)
+
+# 20 s seamless music bed (frequencies are multiples of 0.05 Hz so it loops cleanly)
+sr, dur = 44100, 20
+notes = [130.8, 196.0, 261.6, 329.6, 392.0]
+samples = []
+for i in range(sr * dur):
+    t = i / sr
+    s = sum(math.sin(2 * math.pi * f * t + 0.3 * math.sin(2 * math.pi * 0.1 * t)) for f in notes) / len(notes)
+    samples.append(0.5 * (0.85 + 0.15 * math.sin(2 * math.pi * 0.1 * t)) * s)
+with wave.open(os.path.join(OUT, "bed.wav"), "wb") as w:
+    w.setnchannels(1); w.setsampwidth(2); w.setframerate(sr)
+    w.writeframes(b"".join(struct.pack("<h", int(v * 32767)) for v in samples))
+
+json.dump(dict(width=W, height=H, hole=hole, pad_start=tl["pad_start"], pad_end=tl["pad_end"], layers=layers,
+               segments=segs, video_out=video_out, video_size=[vw, vh]),
+          open(os.path.join(OUT, "manifest.json"), "w"), indent=1)
+print("assets ready:", len(layers), "caption layers; screen", screen_w, "x", screen_h)

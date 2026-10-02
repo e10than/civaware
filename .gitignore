@@ -7,3 +7,6 @@ build/
 *.xcodeproj/project.xcworkspace/xcuserdata/
 Docs/StudentTest/*_REAL*.csv
 Docs/CivAware_demo.mp4
+Docs/CivAware_demo_screen.mp4
+Docs/cover_options/
+Docs/icon_options/

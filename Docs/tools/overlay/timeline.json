@@ -1,0 +1,199 @@
+{
+  "_help": "segments cut the best moments out of your raw recording (src = [start, end] in seconds of the raw file, optional rate for speed-up). Captions attach to segments by id and span all consecutive segments that share it. Edit freely.",
+  "pad_start": 4,
+  "pad_end": 8,
+  "intro": {
+    "title": "CivAware",
+    "subtitle": "Stay aware. Stay involved."
+  },
+  "outro": {
+    "title": "CivAware",
+    "lines": [
+      "Stay aware. Stay involved.",
+      "github.com/e10than/civaware",
+      "Built by Ethan Lee for the Congressional App Challenge",
+      "Built with the help of Claude Code (AI), as disclosed in the application"
+    ]
+  },
+  "captions": {
+    "home": {
+      "title": "A civics app built for phones",
+      "lines": [
+        "A daily awareness question,",
+        "streaks, XP and badges."
+      ]
+    },
+    "learn": {
+      "title": "Learn",
+      "lines": [
+        "14 short lessons in 7 units,",
+        "each with official sources."
+      ]
+    },
+    "quiz": {
+      "title": "Instant feedback",
+      "lines": [
+        "Every lesson ends with a quiz,",
+        "and you earn XP and a streak."
+      ]
+    },
+    "spin": {
+      "title": "Simulate: Spot the Spin",
+      "lines": [
+        "Sort made-up posts into trustworthy",
+        "news, opinion, or needs checking."
+      ]
+    },
+    "bill": {
+      "title": "Simulate: Build a Bill",
+      "lines": [
+        "Take an idea through Congress.",
+        "Most bills never make it,",
+        "just like real life."
+      ]
+    },
+    "act": {
+      "title": "Act: your real representatives",
+      "lines": [
+        "Enter a ZIP code and an address",
+        "to see your Senators and",
+        "House member, with phone",
+        "and contact links."
+      ]
+    },
+    "me": {
+      "title": "Track your progress",
+      "lines": [
+        "Levels, streaks and badges."
+      ]
+    },
+    "end": {
+      "title": "Private by design",
+      "lines": [
+        "No accounts. No ads. No tracking."
+      ]
+    },
+    "learn_done": {
+      "title": "Progress that sticks",
+      "lines": [
+        "Finish a lesson and your",
+        "streak and XP save on the phone."
+      ]
+    }
+  },
+  "segments": [
+    {
+      "src": [
+        21,
+        30
+      ],
+      "cap": "home"
+    },
+    {
+      "src": [
+        30.5,
+        37
+      ],
+      "cap": "learn"
+    },
+    {
+      "src": [
+        109,
+        123
+      ],
+      "cap": "learn",
+      "rate": 1.4
+    },
+    {
+      "src": [
+        139,
+        146
+      ],
+      "cap": "quiz"
+    },
+    {
+      "src": [
+        150,
+        157
+      ],
+      "cap": "quiz"
+    },
+    {
+      "src": [
+        161,
+        167
+      ],
+      "cap": "quiz"
+    },
+    {
+      "src": [
+        180,
+        184
+      ],
+      "cap": "learn_done"
+    },
+    {
+      "src": [
+        185,
+        197
+      ],
+      "cap": "spin"
+    },
+    {
+      "src": [
+        212,
+        217
+      ],
+      "cap": "spin"
+    },
+    {
+      "src": [
+        222,
+        232
+      ],
+      "cap": "bill"
+    },
+    {
+      "src": [
+        244,
+        254
+      ],
+      "cap": "bill"
+    },
+    {
+      "src": [
+        293,
+        303
+      ],
+      "cap": "act"
+    },
+    {
+      "src": [
+        309,
+        321
+      ],
+      "cap": "act"
+    },
+    {
+      "src": [
+        329,
+        334
+      ],
+      "cap": "act"
+    },
+    {
+      "src": [
+        335,
+        341
+      ],
+      "cap": "me"
+    },
+    {
+      "src": [
+        342,
+        347
+      ],
+      "cap": "end"
+    }
+  ]
+}
